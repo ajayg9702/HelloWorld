@@ -11,21 +11,27 @@
 
             color: red;
             background-color: rgb(255, 255, 255);
-            height: 200px;
-            width: 400px;
+           
             margin-left: 300px;
         }
     </style>
 </head>
 <body>
    <button class="red" onclick="pop()">click me</button> 
+  <label for="input1">input 1</label> <input type="text" id = "input1">
+   <label for="input2">input 2</label><input type="text" id = "input2">
+   <label for="sum">Sum</label><input type="text" id = "sum" value="">
 </body>
 
 <script>
 
     function pop(){
 
-alert("Button Clicked");
+       var a =  document.getElementById('input1').value;
+       var b = document.getElementById('input2').value;
+
+       var sum = document.getElementById('sum').value = parseInt(a) + parseInt(b);
+       console.log(sum);
 
     }
 </script>
